@@ -13,7 +13,7 @@ Kita dapat berpindah mode dengan menekan tombol spasi.
 Struktur Program
 
 1. Class Ball
-Atribut:
+   Atribut:
 - x, y (posisi bola)
 - vx, vy (kecepatan bola)
 - r (radius bola)
@@ -24,21 +24,21 @@ Metode:
 - draw(),  untuk menggambar bola ke layar
 
 2. Fungsi collision(Ball &a, Ball &b)
-Cara kerja:
+   Cara kerja:
 - Menghitung jarak antar pusat bola
 - Jika jarak lebih kecil dari jumlah radius, maka terjadi tabrakan
 - Kecepatan kedua bola ditukar untuk menggambarkan pantulan
 
 3. Bruteforce Collision Detection
-Semua pasangan bola dicek satu per satu menggunakan dua nested loop.
-Ciri:
+   Semua pasangan bola dicek satu per satu menggunakan dua nested loop.
+   Ciri:
 - Mudah diimplementasikan
 - Kompleksitas waktu O(n²)
 - Tidak efisien untuk jumlah bola besar
 
 4. Class Quadtree
-Digunakan untuk optimasi collision detection dengan membagi ruang menjadi beberapa area (node).
-Fungsi utama:
+   Digunakan untuk optimasi collision detection dengan membagi ruang menjadi beberapa area (node).
+   Fungsi utama:
 - Menyimpan bola dalam struktur pohon berdasarkan posisi
 - Mengurangi jumlah pasangan bola yang perlu dicek
 Pada program ini, Quadtree digunakan sebagai konsep pembagian ruang dan dapat diaktifkan dengan tombol spasi
